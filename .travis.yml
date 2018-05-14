@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 
 language: generic
 
@@ -98,7 +98,7 @@ env:
     - secure: cc4esJY1vPXL31IeumAJoKWDDO2BTGFiltwfO1jbTbiV7QT911QUjTUasxXIVpOaHNCpxSTyevPwwTWfzt2EtF92Lli+qhQ2bbzMiDSBZstSrHdAe62Ai2M1oYYUwk/0cABB/2nO9uRyYwITCxpTSNzZBrYhn3C29WqBhPeVDmM=
 
 before_install:
-- brew upgrade pip
+- sudo pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --upgrade pip
 - export PUBLISHABLE=${PUBLISHABLE:-true}
 - export COVERAGE=${COVERAGE:-false}
 - if [[ $(uname -s) == 'Linux' ]]; then
