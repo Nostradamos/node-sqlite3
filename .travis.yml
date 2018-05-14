@@ -108,7 +108,7 @@ before_install:
   else
     export PYTHONPATH=$(pwd)/py-local/lib/python/site-packages;
   fi;
-- pip2 install --trusted-host pypi.org --trusted-host files.pythonhosted.org --upgrade pip
+- sudo pip2 install --trusted-host pypi.org --trusted-host files.pythonhosted.org --upgrade pip
 - scripts/validate_tag.sh
 - source ./scripts/install_node.sh ${NODE_VERSION}
 
