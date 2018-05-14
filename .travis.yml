@@ -98,7 +98,7 @@ env:
     - secure: cc4esJY1vPXL31IeumAJoKWDDO2BTGFiltwfO1jbTbiV7QT911QUjTUasxXIVpOaHNCpxSTyevPwwTWfzt2EtF92Lli+qhQ2bbzMiDSBZstSrHdAe62Ai2M1oYYUwk/0cABB/2nO9uRyYwITCxpTSNzZBrYhn3C29WqBhPeVDmM=
 
 before_install:
-- bew upgrade pip
+- brew upgrade pip
 - export PUBLISHABLE=${PUBLISHABLE:-true}
 - export COVERAGE=${COVERAGE:-false}
 - if [[ $(uname -s) == 'Linux' ]]; then
