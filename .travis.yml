@@ -70,6 +70,7 @@ matrix:
      #       packages: [ 'clang-3.5','libsqlite3-dev']
      # OS X
      - os: osx
+       osx_image: xcode9.3
        compiler: clang
        env: NODE_VERSION="5" COVERAGE=true PUBLISHABLE=false # node abi 47
      #- os: osx
@@ -107,7 +108,7 @@ before_install:
   else
     export PYTHONPATH=$(pwd)/py-local/lib/python/site-packages;
   fi;
-- PYTHONUSERBASE=$(pwd)/py-local pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --upgrade pip
+- pip2 install --trusted-host pypi.org --trusted-host files.pythonhosted.org --upgrade pip
 - scripts/validate_tag.sh
 - source ./scripts/install_node.sh ${NODE_VERSION}
 
